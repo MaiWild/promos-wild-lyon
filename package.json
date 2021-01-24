@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "bash -c 'rm -fr ../maiwild.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../maiwild.github.io'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
