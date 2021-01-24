@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "bash -c 'rm -fr ./docs && npm run build && npx next export && cp -a out/. docs'"
+    "deploy": "bash -c 'rm -fr ./docs && npm run build && npx next export && cp -a out/. ./docs && rm -rf ./out'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
