@@ -1,32 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { students } from '../data/promo';
-
-const People = ({ name, github, mail, stack, cv, portrait }) => (
-  <div className={styles.card}>
-    <img src={portrait} className={styles.portrait} />
-    <h2>{name}</h2>
-    <ul className={styles.stack}>
-      {stack.map(icon => (
-        <li>
-          <FontAwesomeIcon icon={['fab', icon]} size="2x" key={icon} />
-        </li>
-      ))}
-    </ul>
-    <p>
-      <a href={github}>{github}</a>
-    </p>
-    <p>
-      <a href={`mailto:${mail}`}>{mail}</a>
-    </p>
-    <a href={cv} className={styles.button}>
-      Voir le C.V.
-    </a>
-  </div>
-);
+import { Student } from '../src/components/student.component';
+import { StudentsGrid } from '../src/components/studentGrid.component';
 
 const TITLE = 'Promo développeur.ses avancé.es web et mobile';
 const SUB_TITLE = 'Alternance avril 2021 - avril 2022';
@@ -44,11 +21,11 @@ export default function Home() {
         <h2 className={styles.subtitle}>{SUB_TITLE}</h2>
 
         {students && students.length ? (
-          <div className={styles.grid}>
+          <StudentsGrid>
             {students.map(student => (
-              <People {...student} key={student.name} />
+              <Student {...student} key={student.name} />
             ))}
-          </div>
+          </StudentsGrid>
         ) : (
           <p>très prochainement...</p>
         )}
