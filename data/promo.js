@@ -1,4 +1,4 @@
-import { ICONS } from '../icons';
+import { ICONS } from '../src/icons';
 
 export const students = [
   {

@@ -7,7 +7,7 @@ import { Footer } from '../src/components/footer.component';
 import theme from '../src/theme';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import '../icons/config';
+import '../src/icons';
 
 config.autoAddCss = false;
 
