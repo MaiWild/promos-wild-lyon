@@ -28,16 +28,20 @@ const People = ({ name, github, mail, stack, cv, portrait }) => (
   </div>
 );
 
+const TITLE = 'Promo développeur.ses avancé.es web et mobile';
+const SUB_TITLE = 'Alternance avril 2021 - avril 2022';
+
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Promotion Développeur alternant #42</title>
+        <title>{TITLE}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Promotion Développeur alternant #42</h1>
+        <h1 className={styles.title}>{TITLE}</h1>
+        <h2 className={styles.subtitle}>{SUB_TITLE}</h2>
 
         <div className={styles.grid}>
           {students.map(student => (

@@ -50,8 +50,14 @@
   font-size: 4rem;
 }
 
+.subtitle {
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+
 .title,
-.description {
+.description,
+.subtitle {
   text-align: center;
 }
 
