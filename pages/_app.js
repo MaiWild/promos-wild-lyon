@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
-import '../styles/globals.css';
-import '../icons/config';
-
+import { Container, ThemeProvider } from '@material-ui/core';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
-config.autoAddCss = false;
-
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core';
+
+import { Footer } from '../src/components/footer.component';
 import theme from '../src/theme';
 
-function MyApp({ Component, pageProps }) {
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import '../icons/config';
+
+config.autoAddCss = false;
+
+export default function App({ Component, pageProps }) {
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -22,9 +23,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Component {...pageProps} />
+      <Container maxWidth="lg">
+        <Component {...pageProps} />
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 }
-
-export default MyApp;
