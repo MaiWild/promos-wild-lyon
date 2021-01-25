@@ -7,7 +7,7 @@ export const Footer = () => (
   <Box
     component="footer"
     borderTop={1}
-    borderColor={theme.palette.border}
+    borderColor={theme.palette.divier}
     align="center"
     mt={8}
   >

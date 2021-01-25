@@ -8,12 +8,7 @@ import theme from '../theme';
 
 export const Student = ({ name, github, mail, stack, cv, portrait }) => {
   return (
-    <Box
-      component="article"
-      p={2}
-      border={1}
-      borderColor={theme.palette.border}
-    >
+    <Box component="article" p={2} borderRadius={12} boxShadow={5}>
       <AvatarStyled alt={name} src={portrait} />
       <Typography variant="h5" component="h1" align="center">
         {name}
