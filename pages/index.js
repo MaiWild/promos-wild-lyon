@@ -43,15 +43,21 @@ export default function Home() {
         <h1 className={styles.title}>{TITLE}</h1>
         <h2 className={styles.subtitle}>{SUB_TITLE}</h2>
 
-        <div className={styles.grid}>
-          {students.map(student => (
-            <People {...student} key={student.name} />
-          ))}
-        </div>
+        {students && students.length ? (
+          <div className={styles.grid}>
+            {students.map(student => (
+              <People {...student} key={student.name} />
+            ))}
+          </div>
+        ) : (
+          <p>très prochainement...</p>
+        )}
       </main>
 
       <footer className={styles.footer}>
-        Done by <a href="https://florentbarriol.com"> Florent Barriol</a>.
+        <p>
+          Done by <a href="https://florentbarriol.com">Florent Barriol</a>.
+        </p>
       </footer>
     </div>
   );

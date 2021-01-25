@@ -27,12 +27,6 @@
   margin-left: 0.5rem;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -51,7 +45,7 @@
 }
 
 .subtitle {
-  margin-top: 1rem;
+  margin: 1rem 0 0;
   font-size: 3rem;
 }
 
@@ -80,7 +74,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 3rem 2rem 0;
+  padding: 3rem 2rem 0;
 }
 
 .card {
